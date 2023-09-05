@@ -30,26 +30,19 @@ header {
   transform: translate(50px, 10px);
 }
 img {
-  display: grid;
-  height: 100vh;
-  width: 100%;
-  padding: 2rem;
+  height: 50%;
+  width: 50%;
+
+  box-sizing: border-box;
 }
-.crystal-pics {
+
+.main-grid {
   display: grid;
-  grid-template-columns: 400px 300px 300px 300px;
-  grid-column: span 2;
-  gap: 1.5rem;
-  background-color: lightblue;
-  margin-inline: auto;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .crystal-pics:first-child {
-}
-
-footer {
-  width: 100%;
-  height: fit-content;
-  background-color: lightcoral;
-  margin: 0px;
+  grid-row: span 2;
 }
