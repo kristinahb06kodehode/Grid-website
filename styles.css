@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: auto;
+}
+
 header {
   background-image: url(images/pastel-background-sky-feminine-style.jpg);
   background-size: cover;
@@ -29,20 +33,32 @@ header {
   align-items: center;
   transform: translate(50px, 10px);
 }
-img {
-  height: 50%;
-  width: 50%;
+.crystal-pics img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
 
-  box-sizing: border-box;
+.crystal-pics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .main-grid {
   display: grid;
-  grid-auto-flow: column;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
+  max-height: 600px;
+  padding: 40px;
+  gap: 20px;
+  border-radius: 12px;
 }
 
-.crystal-pics:first-child {
+.crystal-pics:nth-child(1) {
   grid-row: span 2;
+  height: 100%;
+  display: block;
 }
